@@ -2,8 +2,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useRouter } from 'next/router';
 import { format } from 'date-fns/esm';
+import InfoCard from '../components/InfoCard';
 
-function search() {
+function Search() {
   const router = useRouter();
   const { location, startDate, endDate, numberOfGuest } = router.query;
 
@@ -34,6 +35,8 @@ function search() {
             <p className="buttonFilter">Rooms and Beds</p>
             <p className="buttonFilter">More Filters</p>
           </div>
+
+          <div className="flex flex-col"></div>
         </section>
       </main>
 
@@ -42,4 +45,4 @@ function search() {
   );
 }
 
-export default search;
+export default Search;
